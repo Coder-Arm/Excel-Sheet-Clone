@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Excel Sheet Clone</title>
+  </head>
+  <body>
+    <header>
+      <nav class="nav-1">
+        <ul>
+          <li>File</li>
+          <li>Home</li>
+          <li>Insert</li>
+          <li>Layout</li>
+          <li>Help</li>
+        </ul>
+      </nav>
+      <nav class="nav-2">
+        <button id="cut-btn">
+          <span class="material-icons"> content_cut </span>
+        </button>
+        <button id="copy-btn">
+          <span class="material-icons"> content_copy </span>
+        </button>
+        <button id="paste-btn">
+          <span class="material-icons"> content_paste </span>
+        </button>
+        <div class="selection">
+          <select id="font-style-dropdown">
+            <option value="serif">Serif</option>
+            <option value="sans-serif">Sans serif</option>
+            <option value="monospace">Monospace</option>
+            <option value="Trebuchet MS">Trebuchet MS</option>
+          </select>
+          <select id="font-size-dropdown">
+            <option value="14px">14</option>
+            <option value="16px">16</option>
+            <option value="18px">18</option>
+            <option value="20px">20</option>
+            <option value="22px">22</option>
+          </select>
+        </div>
+        <button id="bold-btn">
+          <span class="material-icons"> format_bold </span>
+        </button>
+        <button id="italic-btn">
+          <span class="material-icons"> format_italic </span>
+        </button>
+        <button id="underline-btn">
+          <span class="material-icons"> format_underlined </span>
+        </button>
+        <button id="aligner-left">
+          <span class="material-icons"> format_align_left </span>
+        </button>
+        <button id="aligner-center">
+          <span class="material-icons"> format_align_center </span>
+        </button>
+        <button id="aligner-right">
+          <span class="material-icons"> format_align_right </span>
+        </button>
+        <label for="text-color-change">Text Color : </label>
+        <input type="color" id="text-color-change" />
+        <label for="bg-color-change">Background : </label>
+        <input type="color" id="bg-color-change" />
+      </nav>
+    </header>
+    <main>
+      <table>
+        <thead id="thead">
+          <tr id="thead-row">
+            <th id="curr-cell"></th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+      <div class="sheets-container">
+        <button id="add-sheet">
+          <span class="material-icons"> add_circle </span>
+        </button>
+        <div id="sheets-box">
+          <button id="sheet-1">Sheet 1</button>
+        </div>
+      </div>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
